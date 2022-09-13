@@ -1,0 +1,50 @@
+DIFFERENCES BETWEEN WINDOW AND DOCUMENT 
+
+                                            DOCUMENT
+                 WINDOW      +     {HTML FILE [PHP,URL,COOKIES,]} -------->  window.document.{property}
+                                Document gets loaded in window object
+
+WINDOW:
+1. Window object represents an open window in a browser. 
+2.This window object has the majority of the properties like length,
+    innerWidth, innerHeight,etc
+3. Browser has responsibilities to expose alerts 
+4. if we are working with alerts that can be found only in the window object  not in the
+    document object
+5. If a document contain frames (<iframe> tags), the browser creates one window object
+    for the HTML document, and one additional window object for each frame.
+
+    WINDOW OBJECT METHOD EXAMPLES:
+
+    alert()                :     Displays an alert box with a message and an OK button
+    clearInterval()   :	Clears a timer set with setInterval()
+    clearTimeout()  :	Clears a timer set with setTimeout()
+    
+    PROPERTIES OF WINDOW EXAMPLES:
+
+    screen :	Gives the Screen object for the window               
+    location:Gives the Location object for the window.
+    name    :Sets or returns the name of a window
+
+DOCUMENT OBJECT:
+1. The document is the actual html file whenever it communicates with the 
+    server.So ,a html file becomes into a document object.
+2. The document object is your html, aspx, php, or other document that will
+    be loaded into the browser. The document actually gets loaded inside the 
+    window object and has properties available to it like title, URL, cookie. 
+3. The document object is a property of the window object.
+4. It is nested inside the window object
+5. To find in the document we use document. , if we call window.document it prints the 
+    same as the document. prints
+    EXAMPLE:
+                   let link = document.URL
+                   let link = window.document.URL
+   These two commands are same which gives the same link
+
+    DOCUMENT OBJECT METHOD AND PROPERTIES EXAMPLES:
+
+    createElement() : Creates an Element node
+    createEvent() : Creates a new event
+    activeElement : Returns the currently focused element in the document
+    body : Sets or returns the document's body (the <body> element)
+
